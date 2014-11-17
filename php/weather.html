@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Weather Search</title>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="http://malsup.github.com/jquery.form.js"></script>
+		<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/jquery.validate.min.js"></script>
+		<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/additional-methods.min.js"></script>
+		<script type="text/javascript" src="weather.js"></script>
+	</head>
+	<body>
+		<form id="weatherForm" method="get" action="php-api.php">
+			<label for="city">City</label>
+			<input type="text" id="city" name="city" /><br />
+			<input type="checkbox" id="useGps" name="useGps" />
+			<label for="useGps">Use Current Location</label><br />
+			<input type="hidden" id="latitude" name="latitude" />
+			<input type="hidden" id="longitude" name="longitude" />
+			<button type="submit">Search</button>
+		</form>
+		<p id="outputArea"></p>
+	</body>
+</html>
